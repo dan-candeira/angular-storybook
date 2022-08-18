@@ -17,6 +17,8 @@ export type Type = 'submit' | 'button';
 		class="cat-button"
 		[attr.data-variant]="variant"
 		[attr.data-size]="size"
+		[attr.data-icon]="icon"
+		[attr.data-icon-position]="icon ? iconPosition : null"
 		(click)="onClick.emit($event)"
 	>
 		{{ label }}
@@ -26,10 +28,24 @@ export type Type = 'submit' | 'button';
 })
 export default class ButtonComponent {
 	/**
-	 * Is this the principal call to action on the page?
+	 * What is the button type?
+	 *
+	 * https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/button#attr-type
 	 */
 	@Input()
 	btnType: Type = 'button';
+
+	/**
+	 * Button icon
+	 */
+	@Input()
+	icon: string;
+
+	/**
+	 * Button icon position
+	 */
+	@Input()
+	iconPosition: 'after' | 'before' = 'after';
 
 	/**
 	 * What should be the button style?

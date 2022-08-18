@@ -11,6 +11,7 @@ export default {
 	argTypes: {
 		variant: { control: 'select', options: ['primary', 'secondary'] },
 		size: { control: 'select', options: ['small', 'medium', 'large'] },
+		iconPosition: { control: 'radio', options: ['after', 'before'] },
 	},
 } as Meta;
 
@@ -32,6 +33,14 @@ Secondary.args = {
 	size: 'medium',
 	label: 'Button',
 	variant: 'secondary',
+};
+
+export const Icon = Template.bind({});
+Icon.args = {
+	size: 'medium',
+	label: 'Button',
+	icon: '📌',
+	iconPosition: 'after',
 };
 
 export const Large = Template.bind({});

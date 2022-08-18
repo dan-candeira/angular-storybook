@@ -100,7 +100,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-94ecc2920bdcde6496899eff20bfafe9a4f4c95a89c6b4eaa2d03d4dec6b09d71e5ba0d67ef45eefad775e886059db04903ccf4d87b876b8adccfa368462d35d",
+            "id": "component-ButtonComponent-5a54629a802c570dda2269bf770cb8319bc35e144fc7dc7436234c67cddc81a1d3d04e03aa3af193a273b6d7a5ebf75c87dc98477f08ea35860fe7818018ba06",
             "file": "src/stories/button.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -122,10 +122,20 @@
                     "defaultValue": "'button'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
-                    "description": "<p>Is this the principal call to action on the page?</p>\n",
-                    "line": 32,
+                    "rawdescription": "\n\nWhat is the button type?\n(More Info)[https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/button#attr-type]\n",
+                    "description": "<p>What is the button type?\n(More Info)[<a href=\"https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/button#attr-type%5D\">https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/button#attr-type]</a></p>\n",
+                    "line": 33,
                     "type": "Type",
+                    "decorators": []
+                },
+                {
+                    "name": "icon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nButton icon\n",
+                    "description": "<p>Button icon</p>\n",
+                    "line": 39,
+                    "type": "string",
                     "decorators": []
                 },
                 {
@@ -135,15 +145,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 919,
-                            "end": 931,
+                            "pos": 1021,
+                            "end": 1033,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 920,
-                                "end": 928,
+                                "pos": 1022,
+                                "end": 1030,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -155,7 +165,7 @@
                     ],
                     "rawdescription": "\n\nButton contents\n\n",
                     "description": "<p>Button contents</p>\n",
-                    "line": 52,
+                    "line": 59,
                     "type": "string",
                     "decorators": []
                 },
@@ -166,7 +176,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nHow large should the button be?\n",
                     "description": "<p>How large should the button be?</p>\n",
-                    "line": 44,
+                    "line": 51,
                     "type": "Size",
                     "decorators": []
                 },
@@ -175,9 +185,9 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
-                    "description": "<p>Is this the principal call to action on the page?</p>\n",
-                    "line": 38,
+                    "rawdescription": "\n\nWhat should be the button style?\n",
+                    "description": "<p>What should be the button style?</p>\n",
+                    "line": 45,
                     "type": "Variant",
                     "decorators": []
                 }
@@ -190,7 +200,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nOptional click handler\n",
                     "description": "<p>Optional click handler</p>\n",
-                    "line": 58,
+                    "line": 65,
                     "type": "EventEmitter"
                 }
             ],
@@ -203,11 +213,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\n\tComponent,\n\tInput,\n\tOutput,\n\tEventEmitter,\n\tChangeDetectionStrategy,\n} from '@angular/core';\n\nexport type Variant = 'primary' | 'secondary' | 'tertiary';\nexport type Size = 'small' | 'medium' | 'large';\nexport type Type = 'submit' | 'button';\n\n@Component({\n\tselector: 'cat-button',\n\ttemplate: ` <button\n\t\t[type]=\"btnType\"\n\t\tclass=\"cat-button\"\n\t\t[attr.data-variant]=\"variant\"\n\t\t[attr.data-size]=\"size\"\n\t\t(click)=\"onClick.emit($event)\"\n\t>\n\t\t{{ label }}\n\t</button>`,\n\tstyleUrls: ['./button.scss'],\n\tchangeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport default class ButtonComponent {\n\t/**\n\t * Is this the principal call to action on the page?\n\t */\n\t@Input()\n\tbtnType: Type = 'button';\n\n\t/**\n\t * Is this the principal call to action on the page?\n\t */\n\t@Input()\n\tvariant: Variant = 'primary';\n\n\t/**\n\t * How large should the button be?\n\t */\n\t@Input()\n\tsize: Size = 'medium';\n\n\t/**\n\t * Button contents\n\t *\n\t * @required\n\t */\n\t@Input()\n\tlabel = 'Button';\n\n\t/**\n\t * Optional click handler\n\t */\n\t@Output()\n\tonClick = new EventEmitter<Event>();\n}\n",
+            "sourceCode": "import {\n\tComponent,\n\tInput,\n\tOutput,\n\tEventEmitter,\n\tChangeDetectionStrategy,\n} from '@angular/core';\n\nexport type Variant = 'primary' | 'secondary' | 'tertiary';\nexport type Size = 'small' | 'medium' | 'large';\nexport type Type = 'submit' | 'button';\n\n@Component({\n\tselector: 'cat-button',\n\ttemplate: ` <button\n\t\t[type]=\"btnType\"\n\t\tclass=\"cat-button\"\n\t\t[attr.data-variant]=\"variant\"\n\t\t[attr.data-size]=\"size\"\n\t\t(click)=\"onClick.emit($event)\"\n\t>\n\t\t{{ label }}\n\t</button>`,\n\tstyleUrls: ['./button.scss'],\n\tchangeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport default class ButtonComponent {\n\t/**\n\t * What is the button type?\n\t * (More Info)[https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/button#attr-type]\n\t */\n\t@Input()\n\tbtnType: Type = 'button';\n\n\t/**\n\t * Button icon\n\t */\n\t@Input()\n\ticon: string;\n\n\t/**\n\t * What should be the button style?\n\t */\n\t@Input()\n\tvariant: Variant = 'primary';\n\n\t/**\n\t * How large should the button be?\n\t */\n\t@Input()\n\tsize: Size = 'medium';\n\n\t/**\n\t * Button contents\n\t *\n\t * @required\n\t */\n\t@Input()\n\tlabel = 'Button';\n\n\t/**\n\t * Optional click handler\n\t */\n\t@Output()\n\tonClick = new EventEmitter<Event>();\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".cat-button {\n\tfont-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n\tfont-weight: 700;\n\tborder: 0;\n\tborder-radius: 3em;\n\tcursor: pointer;\n\tdisplay: inline-block;\n\tline-height: 1;\n\n\t&[data-variant='primary'] {\n\t\tcolor: white;\n\t\t// fallback for older browsers\n\t\tbackground-color: #1ea7fd;\n\t\tbackground-color: var(--cat-btn-color, #1ea7fd);\n\t}\n\n\t&[data-variant='secondary'] {\n\t\tcolor: #333;\n\t\tbackground-color: transparent;\n\t\tbox-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n\t}\n\n\t&[data-size='small'] {\n\t\tfont-size: 12px;\n\t\tpadding: 10px 16px;\n\t}\n\n\t&[data-size='medium'] {\n\t\tfont-size: 14px;\n\t\tpadding: 11px 20px;\n\t}\n\n\t&[data-size='large'] {\n\t\tfont-size: 16px;\n\t\tpadding: 12px 24px;\n\t}\n}\n",
+                    "data": ".cat-button {\n\tfont-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n\tfont-weight: 700;\n\tborder: 0;\n\tborder-radius: 4px;\n\tline-height: 1.25;\n\tcursor: pointer;\n\tdisplay: inline-block;\n\n\t&[data-variant='primary'] {\n\t\tcolor: white;\n\t\tcolor: var(--cat-btn-color, white);\n\t\t// fallback for older browsers\n\t\tbackground-color: #1ea7fd;\n\t\tbackground-color: var(--cat-btn-bg, #1ea7fd);\n\t}\n\n\t&[data-variant='secondary'] {\n\t\tcolor: #333;\n\t\tbackground-color: transparent;\n\t\tbox-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n\t}\n\n\t&[data-size='small'] {\n\t\tfont-size: 12px;\n\t\tpadding: 10px 16px;\n\t}\n\n\t&[data-size='medium'] {\n\t\tfont-size: 14px;\n\t\tpadding: 11px 20px;\n\t}\n\n\t&[data-size='large'] {\n\t\tfont-size: 16px;\n\t\tpadding: 12px 24px;\n\t}\n}\n",
                     "styleUrl": "./button.scss"
                 }
             ],
@@ -331,6 +341,16 @@
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "Icon",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Large",
@@ -476,6 +496,16 @@
                 }
             ],
             "src/stories/Button.stories.ts": [
+                {
+                    "name": "Icon",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
                 {
                     "name": "Large",
                     "ctype": "miscellaneous",
@@ -629,6 +659,16 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "Icon",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "Large",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -688,8 +728,8 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonComponent",
-                "coveragePercent": 83,
-                "coverageCount": "5/6",
+                "coveragePercent": 85,
+                "coverageCount": "6/7",
                 "status": "very-good"
             },
             {
