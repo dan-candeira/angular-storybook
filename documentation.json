@@ -100,128 +100,103 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-5a54629a802c570dda2269bf770cb8319bc35e144fc7dc7436234c67cddc81a1d3d04e03aa3af193a273b6d7a5ebf75c87dc98477f08ea35860fe7818018ba06",
-            "file": "src/stories/button.component.ts",
+            "id": "component-ButtonComponent-7cbd9028ea4da2f7e1a0b9f1b456ccc5aed11669f940e96cf7273ccd3303dbb10471f4be4fe40cd44707de64740bb514bcc8a8ec286d4a937cf71beda65cc1f5",
+            "file": "src/stories/button/button.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
             "entryComponents": [],
+            "host": {},
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "cat-button",
+            "selector": "button[cat-button]",
             "styleUrls": [
-                "./button.scss"
+                "./button.component.scss"
             ],
             "styles": [],
-            "template": "<button\t[type]=\"btnType\"\n\tclass=\"cat-button\"\n\t[attr.data-variant]=\"variant\"\n\t[attr.data-size]=\"size\"\n\t(click)=\"onClick.emit($event)\"\n>\n\t{{ label }}\n</button>",
-            "templateUrl": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
             "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "btnType",
-                    "defaultValue": "'button'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nWhat is the button type?\n(More Info)[https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/button#attr-type]\n",
-                    "description": "<p>What is the button type?\n(More Info)[<a href=\"https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/button#attr-type%5D\">https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/button#attr-type]</a></p>\n",
-                    "line": 33,
-                    "type": "Type",
-                    "decorators": []
-                },
-                {
-                    "name": "icon",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nButton icon\n",
-                    "description": "<p>Button icon</p>\n",
-                    "line": 39,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "'Button'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "pos": 1021,
-                            "end": 1033,
-                            "flags": 4227072,
-                            "modifierFlagsCache": 0,
-                            "transformFlags": 0,
-                            "kind": 325,
-                            "tagName": {
-                                "pos": 1022,
-                                "end": 1030,
-                                "flags": 4227072,
-                                "modifierFlagsCache": 0,
-                                "transformFlags": 0,
-                                "kind": 79,
-                                "escapedText": "required"
-                            },
-                            "comment": ""
-                        }
-                    ],
-                    "rawdescription": "\n\nButton contents\n\n",
-                    "description": "<p>Button contents</p>\n",
-                    "line": 59,
-                    "type": "string",
-                    "decorators": []
-                },
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
                 {
                     "name": "size",
                     "defaultValue": "'medium'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "\n\nHow large should the button be?\n",
-                    "description": "<p>How large should the button be?</p>\n",
-                    "line": 51,
                     "type": "Size",
-                    "decorators": []
+                    "optional": false,
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 22,
+                    "rawdescription": "\n\nHow large should the button be?\n",
+                    "decorators": [
+                        {
+                            "name": "HostBinding",
+                            "stringifiedArguments": "'attr.data-size'"
+                        }
+                    ]
                 },
                 {
                     "name": "variant",
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
+                    "type": "Variant",
+                    "optional": false,
+                    "description": "<p>What should be the button style?</p>\n",
+                    "line": 16,
+                    "rawdescription": "\n\nWhat should be the button style?\n",
+                    "decorators": [
+                        {
+                            "name": "HostBinding",
+                            "stringifiedArguments": "'attr.data-variant'"
+                        }
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [
+                {
+                    "name": "attr.data-size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the button be?\n",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 22,
+                    "type": "Size",
+                    "decorators": []
+                },
+                {
+                    "name": "attr.data-variant",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
                     "rawdescription": "\n\nWhat should be the button style?\n",
                     "description": "<p>What should be the button style?</p>\n",
-                    "line": 45,
+                    "line": 16,
                     "type": "Variant",
                     "decorators": []
                 }
             ],
-            "outputsClass": [
-                {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nOptional click handler\n",
-                    "description": "<p>Optional click handler</p>\n",
-                    "line": 65,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
             "hostListeners": [],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\n\tComponent,\n\tInput,\n\tOutput,\n\tEventEmitter,\n\tChangeDetectionStrategy,\n} from '@angular/core';\n\nexport type Variant = 'primary' | 'secondary' | 'tertiary';\nexport type Size = 'small' | 'medium' | 'large';\nexport type Type = 'submit' | 'button';\n\n@Component({\n\tselector: 'cat-button',\n\ttemplate: ` <button\n\t\t[type]=\"btnType\"\n\t\tclass=\"cat-button\"\n\t\t[attr.data-variant]=\"variant\"\n\t\t[attr.data-size]=\"size\"\n\t\t(click)=\"onClick.emit($event)\"\n\t>\n\t\t{{ label }}\n\t</button>`,\n\tstyleUrls: ['./button.scss'],\n\tchangeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport default class ButtonComponent {\n\t/**\n\t * What is the button type?\n\t * (More Info)[https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/button#attr-type]\n\t */\n\t@Input()\n\tbtnType: Type = 'button';\n\n\t/**\n\t * Button icon\n\t */\n\t@Input()\n\ticon: string;\n\n\t/**\n\t * What should be the button style?\n\t */\n\t@Input()\n\tvariant: Variant = 'primary';\n\n\t/**\n\t * How large should the button be?\n\t */\n\t@Input()\n\tsize: Size = 'medium';\n\n\t/**\n\t * Button contents\n\t *\n\t * @required\n\t */\n\t@Input()\n\tlabel = 'Button';\n\n\t/**\n\t * Optional click handler\n\t */\n\t@Output()\n\tonClick = new EventEmitter<Event>();\n}\n",
+            "sourceCode": "import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';\nimport { Size, Variant } from './button.model';\n\n@Component({\n\tselector: 'button[cat-button]',\n\ttemplateUrl: './button.component.html',\n\tstyleUrls: ['./button.component.scss'],\n\tchangeDetection: ChangeDetectionStrategy.OnPush,\n\thost: { class: 'cat-btn-base' },\n})\nexport default class ButtonComponent {\n\t/**\n\t * What should be the button style?\n\t */\n\t@HostBinding('attr.data-variant')\n\tvariant: Variant = 'primary';\n\n\t/**\n\t * How large should the button be?\n\t */\n\t@HostBinding('attr.data-size')\n\tsize: Size = 'medium';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".cat-button {\n\tfont-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n\tfont-weight: 700;\n\tborder: 0;\n\tborder-radius: 4px;\n\tline-height: 1.25;\n\tcursor: pointer;\n\tdisplay: inline-block;\n\n\t&[data-variant='primary'] {\n\t\tcolor: white;\n\t\tcolor: var(--cat-btn-color, white);\n\t\t// fallback for older browsers\n\t\tbackground-color: #1ea7fd;\n\t\tbackground-color: var(--cat-btn-bg, #1ea7fd);\n\t}\n\n\t&[data-variant='secondary'] {\n\t\tcolor: #333;\n\t\tbackground-color: transparent;\n\t\tbox-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n\t}\n\n\t&[data-size='small'] {\n\t\tfont-size: 12px;\n\t\tpadding: 10px 16px;\n\t}\n\n\t&[data-size='medium'] {\n\t\tfont-size: 14px;\n\t\tpadding: 11px 20px;\n\t}\n\n\t&[data-size='large'] {\n\t\tfont-size: 16px;\n\t\tpadding: 12px 24px;\n\t}\n}\n",
-                    "styleUrl": "./button.scss"
+                    "data": ":host(.cat-btn-base) {\n\tfont-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n\tfont-weight: 700;\n\tborder: 0;\n\tborder-radius: 4px;\n\tline-height: 1.25;\n\tcursor: pointer;\n\tdisplay: inline-block;\n\n\tbackground-color: var(--cat-btn-bg, hsl(203, 98%, 55%));\n\n\t&[data-variant='primary'] {\n\t\tcolor: white;\n\t\tcolor: var(--cat-btn-color, white);\n\n\t\t// fallback for older browsers\n\t\tbackground-color: hsl(203, 98%, 55%);\n\t}\n\n\t&[data-variant='secondary'] {\n\t\t--outline-color: hsl(0, 0%, 20%);\n\t\t--cat-btn-bg: transparent;\n\t\t--cat-btn-bg-hover: hsl(0, 0%, 85%);\n\n\t\tcolor: #333;\n\t\tbox-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n\t}\n\n\t&[data-size='small'] {\n\t\tfont-size: 12px;\n\t\tpadding: 10px 16px;\n\t}\n\n\t&[data-size='medium'] {\n\t\tfont-size: 14px;\n\t\tpadding: 11px 20px;\n\t}\n\n\t&[data-size='large'] {\n\t\tfont-size: 16px;\n\t\tpadding: 12px 24px;\n\t}\n\n\t&[data-icon-position='after']::after {\n\t\tcontent: attr(data-icon);\n\t\tpadding-left: 20px;\n\t}\n\n\t&[data-icon-position='before']::before {\n\t\tcontent: attr(data-icon);\n\t\tpadding-right: 10px;\n\t}\n\n\t&:hover {\n\t\tbackground-color: lighter(#1ea7fd, 10%);\n\t\tbackground-color: var(--cat-btn-bg-hover, hsl(203, 98%, 45%));\n\t}\n\n\t&:focus,\n\t&:focus-visible {\n\t\tbackground-color: lighter(#1ea7fd, 10%);\n\t\tbackground-color: var(--cat-btn-bg-hover, hsl(203, 98%, 45%));\n\t\toutline: 2px dotted var(--outline-color, hsl(203, 98%, 40%));\n\t\toutline-offset: 3px;\n\t}\n}\n\n/* You can add global styles to this file, and also import other style files */\n\n.pct-pin:before {\n\tcontent: '📌';\n}\n",
+                    "styleUrl": "./button.component.scss"
                 }
             ],
-            "stylesData": ""
+            "stylesData": "",
+            "templateData": "<ng-content select=\".cat-icon:not([data-icon-position='end'])\"> </ng-content>\n\n<span class=\"cat-button__label\">\n\t<ng-content></ng-content>\n</span>\n\n<ng-content select=\".cat-icon:[data-icon-position='end']\"> </ng-content>\n"
         }
     ],
     "modules": [
@@ -313,6 +288,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "BaseTemplate",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/button/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\n\tprops: args,\n\ttemplate: `\n\t  <button cat-button>Button</button>\n\t`,\n})"
+            },
+            {
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -321,6 +306,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "CustomTemplate",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/button/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\n\tprops: args,\n\ttemplate: `\n\t  <button cat-button>Button <span class=\"cat-icon\" data-icon-position=\"end\">🎉</span></button>\n\t`,\n})"
             },
             {
                 "name": "environment",
@@ -346,31 +341,31 @@
                 "name": "Icon",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/button/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "Template.bind({})"
+                "defaultValue": "CustomTemplate.bind({})"
             },
             {
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/button/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "Template.bind({})"
+                "defaultValue": "BaseTemplate.bind({})"
             },
             {
-                "name": "Primary",
+                "name": "primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/button/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "Template.bind({})"
+                "defaultValue": "BaseTemplate.bind({})"
             },
             {
                 "name": "require",
@@ -385,41 +380,42 @@
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/button/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "Template.bind({})"
+                "defaultValue": "BaseTemplate.bind({})"
             },
             {
                 "name": "Small",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/button/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n\tprops: args,\n})"
+                "defaultValue": "BaseTemplate.bind({})"
             }
         ],
         "functions": [],
         "typealiases": [
             {
+                "name": "Position",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"after\" | \"before\"",
+                "file": "src/stories/button/button.model.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 186
+            },
+            {
                 "name": "Size",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "\"small\" | \"medium\" | \"large\"",
-                "file": "src/stories/button.component.ts",
+                "file": "src/stories/button/button.model.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -429,8 +425,8 @@
                 "name": "Type",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "\"submit\" | \"button\"",
-                "file": "src/stories/button.component.ts",
+                "rawtype": "\"submit\" | \"button\" | \"reset\"",
+                "file": "src/stories/button/button.model.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -441,15 +437,134 @@
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "\"primary\" | \"secondary\" | \"tertiary\"",
-                "file": "src/stories/button.component.ts",
+                "file": "src/stories/button/button.model.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 186
             }
         ],
-        "enumerations": [],
+        "enumerations": [
+            {
+                "name": "IconPostition",
+                "childs": [
+                    {
+                        "name": "after",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "after"
+                    },
+                    {
+                        "name": "before",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "before"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/stories/button/button.model.ts"
+            },
+            {
+                "name": "StyleType",
+                "childs": [
+                    {
+                        "name": "iconOnly",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "iconOnly"
+                    },
+                    {
+                        "name": "common",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "common"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/stories/button/button.model.ts"
+            }
+        ],
         "groupedVariables": {
+            "src/stories/button/Button.stories.ts": [
+                {
+                    "name": "BaseTemplate",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Button>",
+                    "defaultValue": "(args: Button) => ({\n\tprops: args,\n\ttemplate: `\n\t  <button cat-button>Button</button>\n\t`,\n})"
+                },
+                {
+                    "name": "CustomTemplate",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Button>",
+                    "defaultValue": "(args: Button) => ({\n\tprops: args,\n\ttemplate: `\n\t  <button cat-button>Button <span class=\"cat-icon\" data-icon-position=\"end\">🎉</span></button>\n\t`,\n})"
+                },
+                {
+                    "name": "Icon",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "CustomTemplate.bind({})"
+                },
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "BaseTemplate.bind({})"
+                },
+                {
+                    "name": "primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "BaseTemplate.bind({})"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "BaseTemplate.bind({})"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "BaseTemplate.bind({})"
+                }
+            ],
             "src/test.ts": [
                 {
                     "name": "context",
@@ -494,80 +609,78 @@
                     "type": "object",
                     "defaultValue": "{\n  production: false\n}"
                 }
-            ],
-            "src/stories/Button.stories.ts": [
-                {
-                    "name": "Icon",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Large",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Secondary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Small",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Button>",
-                    "defaultValue": "(args: Button) => ({\n\tprops: args,\n})"
-                }
             ]
         },
         "groupedFunctions": {},
-        "groupedEnumerations": {},
+        "groupedEnumerations": {
+            "src/stories/button/button.model.ts": [
+                {
+                    "name": "IconPostition",
+                    "childs": [
+                        {
+                            "name": "after",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "after"
+                        },
+                        {
+                            "name": "before",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "before"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/stories/button/button.model.ts"
+                },
+                {
+                    "name": "StyleType",
+                    "childs": [
+                        {
+                            "name": "iconOnly",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "iconOnly"
+                        },
+                        {
+                            "name": "common",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "common"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/stories/button/button.model.ts"
+                }
+            ]
+        },
         "groupedTypeAliases": {
-            "src/stories/button.component.ts": [
+            "src/stories/button/button.model.ts": [
+                {
+                    "name": "Position",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"after\" | \"before\"",
+                    "file": "src/stories/button/button.model.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 186
+                },
                 {
                     "name": "Size",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "\"small\" | \"medium\" | \"large\"",
-                    "file": "src/stories/button.component.ts",
+                    "file": "src/stories/button/button.model.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -577,8 +690,8 @@
                     "name": "Type",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "\"submit\" | \"button\"",
-                    "file": "src/stories/button.component.ts",
+                    "rawtype": "\"submit\" | \"button\" | \"reset\"",
+                    "file": "src/stories/button/button.model.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -589,7 +702,7 @@
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "\"primary\" | \"secondary\" | \"tertiary\"",
-                    "file": "src/stories/button.component.ts",
+                    "file": "src/stories/button/button.model.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -613,7 +726,7 @@
         ]
     },
     "coverage": {
-        "count": 6,
+        "count": 5,
         "status": "low",
         "files": [
             {
@@ -655,66 +768,6 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Icon",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Large",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Secondary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Small",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
                 "filePath": "src/stories/User.ts",
                 "type": "interface",
                 "linktype": "interface",
@@ -724,12 +777,82 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/button.component.ts",
+                "filePath": "src/stories/button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BaseTemplate",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "CustomTemplate",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Icon",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button/button.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonComponent",
-                "coveragePercent": 85,
-                "coverageCount": "6/7",
+                "coveragePercent": 80,
+                "coverageCount": "4/5",
                 "status": "very-good"
             },
             {

@@ -2,6 +2,7 @@
 // import { Story, Meta } from "@storybook/angular/types-6-0";
 import { Meta, Story } from '@storybook/angular';
 import Button from './button.component';
+import { StyleType } from './button.model';
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
@@ -9,48 +10,53 @@ export default {
 	component: Button,
 	// More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
 	argTypes: {
-		variant: { control: 'select', options: ['primary', 'secondary'] },
+		variant: {
+			control: 'select',
+			options: ['primary', 'secondary', 'terciary'],
+		},
 		size: { control: 'select', options: ['small', 'medium', 'large'] },
-		iconPosition: { control: 'radio', options: ['after', 'before'] },
 	},
 } as Meta;
 
 // More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
-const Template: Story<Button> = (args: Button) => ({
+const BaseTemplate: Story<Button> = (args: Button) => ({
 	props: args,
+	template: `
+	  <button data-variant="${args.variant}" data-size="${args.size}" cat-button>Button</button>
+	`,
 });
 
-export const Primary = Template.bind({});
+const CustomTemplate: Story<Button> = (args: Button) => ({
+	props: args,
+	template: `
+	  <button data-variant="primary" data-size="large" cat-button>Button <span class="cat-icon" data-icon-position="end">🎉</span></button>
+	`,
+});
+
+export const primary = BaseTemplate.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
-Primary.args = {
+primary.args = {
 	size: 'medium',
-	label: 'Button',
 	variant: 'primary',
 };
 
-export const Secondary = Template.bind({});
+export const Secondary = BaseTemplate.bind({});
 Secondary.args = {
 	size: 'medium',
-	label: 'Button',
 	variant: 'secondary',
 };
 
-export const Icon = Template.bind({});
+export const Icon = CustomTemplate.bind({});
 Icon.args = {
 	size: 'medium',
-	label: 'Button',
-	icon: '📌',
-	iconPosition: 'after',
 };
 
-export const Large = Template.bind({});
+export const Large = BaseTemplate.bind({});
 Large.args = {
 	size: 'large',
-	label: 'Button',
 };
 
-export const Small = Template.bind({});
+export const Small = BaseTemplate.bind({});
 Small.args = {
 	size: 'small',
-	label: 'Button',
 };
